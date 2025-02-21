@@ -51,7 +51,7 @@ def customize_zshrc():
     with open(zshrc_file, "r") as file:
         zshrc_content = file.read()
 
-    zshrc_content = zshrc_content.replace('ZSH_THEME="robbyrussell"', 'ZSH_THEME="agnoster"')
+    zshrc_content = zshrc_content.replace('ZSH_THEME="robbyrussell"', 'ZSH_THEME="gnzh"')
     zshrc_content = zshrc_content.replace('plugins=(git)', 'plugins=(git zsh-autosuggestions zsh-syntax-highlighting)')
 
     with open(zshrc_file, "w") as file:
