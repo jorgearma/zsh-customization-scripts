@@ -1,3 +1,4 @@
+
 import os
 import subprocess
 import sys
@@ -60,8 +61,18 @@ def install_plugins():
     """Instala los plugins zsh-autosuggestions y zsh-syntax-highlighting."""
     print("Instalando plugins zsh-autosuggestions y zsh-syntax-highlighting...")
 
-    run_command('git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions')
-    run_command('git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting')
+    zsh_custom = os.environ.get("ZSH_CUSTOM", os.path.expanduser("~/.oh-my-zsh/custom"))
+    plugins = {
+        "zsh-autosuggestions": "https://github.com/zsh-users/zsh-autosuggestions.git",
+        "zsh-syntax-highlighting": "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    }
+
+    for plugin, repo in plugins.items():
+        plugin_path = os.path.join(zsh_custom, "plugins", plugin)
+        if not os.path.exists(plugin_path):
+            run_command(f'git clone {repo} {plugin_path}')
+        else:
+            print(f"El plugin {plugin} ya está instalado en {plugin_path}")
 
 def change_shell_to_zsh():
     """Cambia el shell por defecto a Zsh."""
@@ -71,7 +82,8 @@ def change_shell_to_zsh():
 def apply_changes():
     """Aplica los cambios en .zshrc."""
     print("Aplicando cambios en .zshrc...")
-    run_command("source ~/.zshrc")
+    run_command(". ~/.zshrc")
+
 
 def main():
     """Función principal para ejecutar todas las tareas."""
