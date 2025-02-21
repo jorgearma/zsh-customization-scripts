@@ -82,7 +82,7 @@ def change_shell_to_zsh():
 def apply_changes():
     """Aplica los cambios en .zshrc."""
     print("Aplicando cambios en .zshrc...")
-    run_command(". ~/.zshrc")
+    run_command("zsh -c 'source ~/.zshrc'")
 
 
 def main():
