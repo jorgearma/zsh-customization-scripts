@@ -25,10 +25,13 @@ Este script automatiza la instalación y personalización de Zsh en sistemas Lin
     git clone https://github.com/jorgearma/zsh-customization-scripts.git
     ```
     ```bash
+    cd zsh-customization-scripts
+    ```
+    ```bash
     python3 kali-shell-zsh.py
     ```
 
-3. si no tiene instalado oh My Zsh  debera escribir #exit cuando se abra la conosla.
+3. ⚠️ Si no tienes Oh My Zsh instalado, escribe `exit` en la consola cuando se abra.
 4. reinicia la terminal y asegúrate de estar en zsh para que los cambios surtan efecto.
 
 ## Pasos realizados por el script
