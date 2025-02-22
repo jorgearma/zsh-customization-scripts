@@ -35,12 +35,19 @@ def is_homebrew_installed():
         return False
 
 def install_oh_my_zsh():
-    """Instala Oh My Zsh."""
+    """Instala Oh My Zsh si no está instalado."""
     print("Instalando Oh My Zsh...")
-    run_command('sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"')
+
+    zsh_folder = os.path.expanduser("~/.oh-my-zsh")
+    if os.path.exists(zsh_folder):
+        print("Oh My Zsh ya está instalado en la carpeta ~/.oh-my-zsh.")
+        return  # Si ya está instalado, no hacer nada más.
+
+    # Si no está instalado, procedemos con la instalación
+    run_command('sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended')
 
     # Verificar que la instalación fue exitosa
-    if not os.path.exists(os.path.expanduser("~/.oh-my-zsh/oh-my-zsh.sh")):
+    if not os.path.exists(os.path.join(zsh_folder, "oh-my-zsh.sh")):
         print("Error: Oh My Zsh no se instaló correctamente.")
         sys.exit(1)
 
@@ -107,6 +114,7 @@ def apply_changes():
     print("  source ~/.zshrc")
     print("O reinicia la terminal y asegúrate de estar en zsh para que los cambios surtan efecto.")
 
+    os.system("zsh")
 
 def main():
     """Función principal para ejecutar todas las tareas."""
