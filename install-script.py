@@ -1,21 +1,3 @@
-Conversación abierta. 1 mensaje leído.
-
-Ir al contenido
-Uso de Gmail con lectores de pantalla
-in:sent 
-Habilita las notificaciones de escritorio para Gmail.
-   Aceptar  No, gracias
-1 de 137
-aaaa
-
-jorge armando escobar correa <jorgesiemprearmando@gmail.com>
-Adjuntos
-16:26 (hace 13 minutos)
-para jorgeescobaruber
-
-
- 1 archivo adjunto
-•  Analizado por Gmail
 import os
 import subprocess
 import sys
@@ -119,10 +101,12 @@ def change_shell_to_zsh():
         print("Error: No se pudo cambiar el shell. Intenta hacerlo manualmente con 'chsh -s $(which zsh)'.")
 
 def apply_changes():
-    """Informa al usuario que debe aplicar los cambios manualmente."""
+    """Informa al usuario que debe aplicar los cambios manualmente en Bash antes de usar zsh."""
     print("Instalación completa. Para aplicar los cambios, ejecuta:")
+    print("  zsh")
     print("  source ~/.zshrc")
-    print("O reinicia la terminal para que los cambios surtan efecto.")
+    print("O reinicia la terminal y asegúrate de estar en zsh para que los cambios surtan efecto.")
+
 
 def main():
     """Función principal para ejecutar todas las tareas."""
