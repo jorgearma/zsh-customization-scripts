@@ -1,6 +1,7 @@
-# Instalación y Personalización Automática de Zsh
+# Instalación y Personalización Automática de Zsh  
 
-Este script automatiza la instalación y personalización de Zsh en sistemas Linux y macOS. Además, instala **Oh My Zsh** y varios plugins útiles para mejorar la experiencia de uso de Zsh.
+Este script facilita la instalación y configuración de **Zsh** en sistemas **Linux** y **macOS**. Además, incorpora **Oh My Zsh** junto con varios complementos útiles para optimizar la experiencia de uso del terminal.
+
 
 ## Requisitos
 - curl
@@ -11,11 +12,16 @@ Este script automatiza la instalación y personalización de Zsh en sistemas Lin
 
 ## Funcionalidad
 
-1. **Instala Zsh**: Dependiendo del sistema operativo (Linux o macOS).
-2. **Instala Oh My Zsh**: Un framework de configuración para Zsh.
-3. **Personaliza `.zshrc`**: Crea un archivo `.zshrc` con configuración básica.
-4. **Instala plugins**: Incluye los plugins `zsh-autosuggestions` y `zsh-syntax-highlighting`.
-5. **Cambia el shell a Zsh**: Cambia el shell predeterminado a Zsh.
+Este script automatiza la instalación y configuración de Zsh con las siguientes características:
+
+1. **Instalación de Zsh**: Verifica y instala Zsh según el sistema operativo (Linux o macOS).  
+2. **Configuración de Oh My Zsh**: Descarga e instala Oh My Zsh, un framework que facilita la personalización del shell.  
+3. **Personalización del entorno**: Genera un archivo `.zshrc` con configuraciones predeterminadas, incluyendo mejoras en la experiencia de usuario.  
+4. **Instalación de plugins esenciales**: Agrega y configura los plugins `zsh-autosuggestions` (sugerencias automáticas de comandos) y `zsh-syntax-highlighting` (resaltado de sintaxis).  
+5. **Cambio del shell predeterminado**: Configura Zsh como el shell por defecto para el usuario actual.  
+
+Con esta configuración, Zsh tendrá un entorno más productivo y fácil de usar, con soporte para autocompletado avanzado y resaltado de sintaxis.  
+
 
 ## Uso
 
@@ -23,8 +29,7 @@ Este script automatiza la instalación y personalización de Zsh en sistemas Lin
 2. Ejecuta el script en tu terminal:
     ```bash
     git clone https://github.com/jorgearma/zsh-customization-scripts.git
-    ```
-    ```bash
+    
     cd zsh-customization-scripts
     ```
     ```bash
@@ -53,4 +58,9 @@ Este script automatiza la instalación y personalización de Zsh en sistemas Lin
 
 ## Licencia
 
-Este proyecto está bajo la licencia MIT.
+Este proyecto está licenciado bajo la **Licencia Pública General de GNU (GPLv2 o posterior)**, la misma utilizada por el kernel de Linux.  
+
+El archivo `./zshrc` proviene de la distribución Kali Linux y se mantiene bajo su licencia original. La automatización y los cambios realizados para agregar control de versiones con Git fueron hechos por mí, pero el contenido base sigue siendo de Kali Linux.  
+
+Para más información sobre la GPL, puedes consultar:  
+[https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)  
