@@ -3,7 +3,8 @@
 Este script automatiza la instalación y personalización de Zsh en sistemas Linux y macOS. Además, instala **Oh My Zsh** y varios plugins útiles para mejorar la experiencia de uso de Zsh.
 
 ## Requisitos
-
+- curl
+- git
 - Python 3
 - Acceso de administrador (sudo) en Linux
 - Homebrew (si usas macOS)
@@ -20,12 +21,15 @@ Este script automatiza la instalación y personalización de Zsh en sistemas Lin
 
 1. Clona este repositorio o descarga el archivo.
 2. Ejecuta el script en tu terminal:
-
     ```bash
-    python install_zsh.py
+    git clone https://github.com/jorgearma/zsh-customization-scripts.git
+    ```
+    ```bash
+    python3 kali-shell-zsh.py
     ```
 
-3. Sigue las instrucciones en pantalla.
+3. si no tiene instalado oh My Zsh  debera escribir #exit cuando se abra la conosla.
+4. reinicia la terminal y asegúrate de estar en zsh para que los cambios surtan efecto.
 
 ## Pasos realizados por el script
 
