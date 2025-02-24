@@ -1,7 +1,8 @@
 # Instalación y Personalización Automática de Zsh  
 
-Este script facilita la instalación y configuración de **Zsh** en sistemas **Linux** y **macOS**. Además, incorpora **Oh My Zsh** junto con varios complementos útiles para optimizar la experiencia de uso del terminal.
+Este script facilita la instalación y configuración de **Zsh** en sistemas **Linux** y **macOS**. Además, incorpora **Oh My Zsh** junto con varios complementos útiles para optimizar la experiencia de uso del terminal
 
+![asi se vera tu shell ](screeshoots/visualexample.png)
 
 ## Requisitos
 - curl
