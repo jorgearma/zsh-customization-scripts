@@ -1,67 +1,101 @@
+# 🚀 Automatic Zsh Installation and Customization  
 
-# Automatic Zsh Installation and Customization  
+This script automates the installation, configuration, and customization of **Zsh** on **Linux** and **macOS** systems. It also installs **Oh My Zsh** and essential plugins to enhance your terminal experience.
 
-This script simplifies the installation and configuration of **Zsh** on **Linux** and **macOS** systems. It also includes **Oh My Zsh** along with several useful plugins to optimize the terminal experience.
+![Visual Example](screeshoots/visualexample.png)
 
-![This is how your shell will look](screeshoots/visualexample.png)
+---
 
-## Requirements
-- curl
-- git
+## ✅ Requirements
+
+- `curl`
+- `git`
 - Python 3
-- Administrator access (sudo) on Linux
-- Homebrew (if using macOS)
+- Administrator access (`sudo`) on Linux
+- [Homebrew](https://brew.sh/) (for macOS)
 
-## Functionality
+---
 
-This script automates the installation and configuration of Zsh with the following features:
+## ⚙️ Features
 
-1. **Zsh Installation**: Verifies and installs Zsh depending on the operating system (Linux or macOS).  
-2. **Oh My Zsh Setup**: Downloads and installs Oh My Zsh, a framework that makes shell customization easier.  
-3. **Environment Customization**: Generates a `.zshrc` file with default settings, including enhancements for user experience.  
-4. **Essential Plugin Installation**: Adds and configures the `zsh-autosuggestions` (auto-suggestions for commands) and `zsh-syntax-highlighting` (syntax highlighting) plugins.  
-5. **Change Default Shell**: Sets Zsh as the default shell for the current user.  
+This script automates the following:
 
-With this setup, Zsh will provide a more productive and user-friendly environment, supporting advanced autocompletion and syntax highlighting.
+1. **Zsh Installation**  
+   Detects the operating system (Linux or macOS) and installs Zsh accordingly.
 
-## Usage
+2. **Oh My Zsh Installation**  
+   Downloads and installs the **Oh My Zsh** framework for easier shell customization.
 
-1. Clone this repository or download the file.
-2. Run the script in your terminal:
-    ```bash
-    git clone https://github.com/jorgearma/zsh-customization-scripts.git
-    
-    cd zsh-customization-scripts
-    ```
-    ```bash
-    python3 kali-shell-zsh.py
-    ```
+3. **Environment Customization**  
+   Creates a `.zshrc` file with advanced settings, visual enhancements, extended history, and more.
 
-3. ⚠️ If you don't have Oh My Zsh installed, type `exit` in the terminal when it opens.
-4. Restart your terminal and ensure you are using Zsh for the changes to take effect.
+4. **Essential Plugins Setup**  
+   Installs and configures:
+   - `zsh-autosuggestions`: auto-suggests previous commands.
+   - `zsh-syntax-highlighting`: highlights command syntax in real time.
 
-## Steps Performed by the Script
+5. **Change Default Shell**  
+   Sets **Zsh** as the default shell for the current user.
 
-- **Zsh Installation**:
-    - On Linux, it uses `apt` to install Zsh.
-    - On macOS, it uses `Homebrew` (it will be installed automatically if not present).
-  
-- **Oh My Zsh Installation**: It installs from the official repository.
+---
 
-- **`.zshrc` Customization**: The `gnzh` theme is set, and the plugins `git`, `zsh-syntax-highlighting`, and `zsh-autosuggestions` are enabled.
+## 🧪 Usage
 
-- **Changing Default Shell**: Sets Zsh as the default shell, asking the user to restart the terminal.
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/jorgearma/zsh-customization-scripts.git
+   cd zsh-customization-scripts
+   ```
 
-## Common Issues
+2. Run the script:
+   ```bash
+   python3 kali-shell-zsh.py
+   ```
 
-- If you don't have `Homebrew` on macOS, the script will install it automatically.
-- If the change to Zsh shell doesn't apply, try manually running `chsh -s $(which zsh)`.
+3. If a new terminal window opens during installation, type `exit` to continue.
 
-## License
+4. Restart your terminal and make sure you are using **Zsh**:
+   ```bash
+   echo $SHELL
+   ```
+   If it doesn't contain "zsh", run:
+   ```bash
+   chsh -s $(which zsh)
+   ```
 
-This project is licensed under the **GNU General Public License (GPLv2 or later)**, the same license used by the Linux kernel.  
+5. ⚠️ **Not seeing syntax colors or suggestions?**  
+   Make sure these packages are installed:
+   ```bash
+   sudo apt install zsh-syntax-highlighting zsh-autosuggestions
+   ```
 
-The file `./zshrc` comes from the Kali Linux distribution and is maintained under its original license. The automation and changes made to add version control with Git were done by me, but the base content remains from Kali Linux.  
+---
 
-For more information about the GPL, you can visit:  
-[https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)  
+## 📝 Script Actions
+
+- Installs Zsh using `apt` (Linux) or `brew` (macOS).
+- Installs **Oh My Zsh** from its official repository.
+- Overwrites `.zshrc` with a configuration inspired by **Kali Linux**.
+- Installs plugins to improve usability.
+- Sets Zsh as the default shell (restart terminal or session might be needed).
+
+---
+
+## 🛠️ Troubleshooting
+
+- On macOS, Homebrew will be installed automatically if not found.
+- If the shell change doesn't take effect, run:
+  ```bash
+  chsh -s $(which zsh)
+  ```
+
+---
+
+## 📜 License
+
+This project is licensed under the **GNU General Public License (GPL v2 or later)**, the same license used by the Linux kernel.
+
+The `.zshrc` file is based on the one from **Kali Linux**, with additional automation and improvements by me. It maintains the original structure but has been adapted for multi-platform deployment.
+
+More info:  
+👉 [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)

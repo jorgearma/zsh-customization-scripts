@@ -57,8 +57,7 @@ def customize_zshrc():
 
     zshrc_file = os.path.expanduser("~/.zshrc")
     
-    new_zshrc_content = """ # ~/.zshrc file for zsh interactive shells.
-# see /usr/share/doc/zsh/examples/zshrc for examples
+    new_zshrc_content = r"""# see /usr/share/doc/zsh/examples/zshrc for examples
 
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
@@ -265,7 +264,7 @@ precmd() {
         if [ -z "$_NEW_LINE_BEFORE_PROMPT" ]; then
             _NEW_LINE_BEFORE_PROMPT=1
         else
-            print ""
+           #print ""
         fi
     fi
 }
@@ -310,10 +309,6 @@ if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
 
-# enable command-not-found if installed
-if [ -f /etc/zsh_command_not_found ]; then
-    . /etc/zsh_command_not_found
-fi
 
 """
 
